@@ -9,7 +9,7 @@ import Search from './Search'
 const SearchSection = (props) => {
 	const { title, searchBtnText, topCategoriesData } = props;
    return (
-		<>
+		<React.Fragment>
 			<div className={styles.headingSection}>
 				<Grid>
 					<Heading type="h1">{title}</Heading>
@@ -19,7 +19,7 @@ const SearchSection = (props) => {
 				<Search searchBtnText={searchBtnText}/>
 			</div>
 			<TopCategories topCategories={topCategoriesData}/>
-		</>
+		</React.Fragment>
 	 )
 }
 
