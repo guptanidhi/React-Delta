@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types'
 import Grid from '../Grid'
 import Heading from '../Heading'
-import styles from './searchsection.scss';
 import TopCategories from './TopCategories';
 import Search from './Search'
+import styles from './searchsection.module.scss'
 
 const SearchSection = (props) => {
 	const { title, searchBtnText, topCategoriesData } = props;
@@ -12,12 +12,12 @@ const SearchSection = (props) => {
 		<React.Fragment>
 			<div className={styles.headingSection}>
 				<Grid>
-					<Heading type="h1">{title}</Heading>
+					<div className={styles.headingWrapper}>
+					 <Heading type="h2">{title}</Heading>
+					</div>
+					<Search searchBtnText={searchBtnText}/>
 				</Grid>
 	 		</div>
-			<div className={styles.formSection}>
-				<Search searchBtnText={searchBtnText}/>
-			</div>
 			<TopCategories topCategories={topCategoriesData}/>
 		</React.Fragment>
 	 )

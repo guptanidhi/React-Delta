@@ -4,9 +4,12 @@
 		display: flex;
 		justify-content: center;
 		flex-wrap: wrap;
+		@media screen and (max-width: 800px) { 
+          justify-content: start;
+		}
 		.requestList{
 			border: 0;
-			padding: 0 5px;
+			padding: 5px;
 		}
 	}
 }

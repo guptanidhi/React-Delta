@@ -1,7 +1,12 @@
 .headingSection{
 	text-align: center;
-	padding: 20px 0;
+	padding: 20px 0 30px;
 }
+
 .formSection, .requestSection, .headingSection {
   background-color: #f7f7f7;
+}
+
+.headingWrapper {
+	margin-bottom: 15px;
 }

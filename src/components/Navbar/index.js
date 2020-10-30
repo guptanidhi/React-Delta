@@ -17,7 +17,7 @@ function CustomNavbar({ navItems }) {
           <Navbar.Collapse id="basic-navbar-nav" className={styles.menuWrapper}>
             <Nav className={`${styles.menulist} mr-auto ml-auto`}>
               {navItems.map((navItem) => (
-                <Nav.Link key={navItem.id} className={styles.navItem} id={navItem.id}>
+                <Nav.Link key={navItem.id} className={styles.menu} id={navItem.id}>
                   {navItem.name}
                 </Nav.Link>
               ))}
