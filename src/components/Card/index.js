@@ -5,7 +5,7 @@ import style from "./card.module.scss";
 
 function CustomCard({ data }) {
   return (
-    <Card>
+    <Card className={style.card}>
       <Card.Body>
         <div className={style.cardHeader}>
           <div className={style.flex}>
