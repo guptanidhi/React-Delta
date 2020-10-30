@@ -1,105 +1,24 @@
 import React from 'react';
-import {Container, Row, Col, InputGroup, FormControl, Button, ListGroup, Carousel} from 'react-bootstrap';
-import NavbarCustom from './Component/Navbar'
-import Heading from './Component/Heading'
+import {Container, Row, Col, Carousel} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import NavbarCustom from './Component/Navbar'
+import SearchSection from './Component/SearchSection'
 import styles from './styles.module.scss'
-
-const newsJson = [{
-  id: 1,
-  name: 'Business News'
-},
-{
-  id: 2,
-  name: 'Technology News'
-},
-{
-  id: 3,
-  name: 'Health News'
-},
-{
-  id: 5,
-  name: 'Entertainment'
-},
-{
-  id: 6,
-  name: 'Stocks'
-},
-{
-  id: 7,
-  name: 'Weather'
-},
-{
-  id: 8,
-  name: 'Tweets'
-},
-{
-  id: 9,
-  name: 'Office Days'
-},
-{
-  id: 10,
-  name: 'Currency'
-}]
+import topCategories from './topCategories'
 
 function App() {
   return (
   <>
-   <div className={styles.header}>
-    <Container>  
-      <Row>
-        <Col>
-          <NavbarCustom />
-        </Col>
-      </Row>
-    </Container>
-  </div>
-  <div className={styles.headingSection}>
-    <Container>
-      <Row>
-        <Col>
-         <Heading type="h1">Datasets</Heading>
-        </Col>
-      </Row>
-    </Container>
-  </div>
-  <div className={styles.formSection}>
-    <Container>
-      <Row>
-        <Col>
-        <InputGroup>
-          <FormControl
-            placeholder="Press Enter To Search"
-            aria-label="Press Enter To Search"
-            aria-describedby="basic-addon2"
-          />
-          <InputGroup.Append>
-            <Button variant="outline-secondary">Filter</Button>
-          </InputGroup.Append>
-        </InputGroup>
-        </Col>
-      </Row>
-    </Container>
-  </div>
-  <div className={styles.requestSection}>
-    <Container>
-      <Row>
-        <Col>
-          <div className={styles.requestBtn}>
-          <ListGroup horizontal>
-          {newsJson.map((json)=>{
-            return (
-            <ListGroup.Item id={json.id} className={styles.requestList}>
-                <Button variant="dark">{json.name}</Button>
-            </ListGroup.Item>
-            )
-          })}
-          </ListGroup>
-          </div>
-        </Col>
-      </Row>
-    </Container>
-  </div>
+    <div className={styles.header}>
+      <Container>  
+        <Row>
+          <Col>
+            <NavbarCustom />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+    <SearchSection title="DeltaSets" searchBtnText="Filter" topCategoriesData={topCategories} />
   <div className={styles.carouselSection}>
      <Container>
        <Row>
