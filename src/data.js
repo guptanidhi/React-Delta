@@ -37,4 +37,26 @@ const topCategories = [
   }
 ]
 
-export default topCategories;
+const navItems = [
+  {
+    id: 1,
+    name: "Open Datasets",
+  },
+  {
+    id: 2,
+    name: "Statistical Rigor",
+  },
+  {
+    id: 3,
+    name: "Pricing",
+  },
+  {
+    id: 4,
+    name: "Consulting",
+  },
+];
+
+export {
+  topCategories,
+  navItems
+}

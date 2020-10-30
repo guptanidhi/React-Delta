@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types'
 import Grid from '../Grid'
 import Heading from '../Heading'
-import styles from './styles.module.scss';
+import styles from './searchsection.scss';
 import TopCategories from './TopCategories';
 import Search from './Search'
 

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types'
 import Grid from '../../Grid'
 import {Button, ListGroup } from 'react-bootstrap';
-import styles from './styles.module.scss';
+import styles from './topCategories.module.scss';
 
 
 const TopCategories = ({topCategories}) => {
@@ -12,7 +12,7 @@ const TopCategories = ({topCategories}) => {
 				<div className={styles.requestBtn}>
 					<ListGroup horizontal>
 						{topCategories.map((item)=>(
-							<ListGroup.Item id={item.id} className={styles.requestList}>
+							<ListGroup.Item key={item.id} id={item.id} className={styles.requestList}>
 								<Button variant="dark">{item.name}</Button>
 							</ListGroup.Item>)
 						)}
