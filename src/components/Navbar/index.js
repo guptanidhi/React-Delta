@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from 'prop-types'
 import { Navbar, Nav, Button } from "react-bootstrap";
-import Grid from "../Grid";
 import styles from "./navbar.module.scss";
 import Icon from '../Icon'
 

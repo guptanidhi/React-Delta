@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Card } from "react-bootstrap";
-import Icon from "../Icon";
 import style from "./card.module.scss";
 
 function CustomCard({ data }) {
@@ -32,7 +31,7 @@ function CustomCard({ data }) {
           </div>
         </div>
         <div className={style.cardFooter}>
-          <Card.Link href="#">View</Card.Link>
+          <Card.Link href={data.FileLocation} target="_blank">View pdf</Card.Link>
         </div>
       </Card.Body>
     </Card>

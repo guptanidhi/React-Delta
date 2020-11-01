@@ -5,7 +5,6 @@ import style from './slider.module.scss'
 import CustomCard from '../Card'
 import Grid from '../Grid'
 import { sliderSettings } from '../../jsonData/data';
-import { Carousel } from 'react-bootstrap';
 
 const CustomSlider = ({ carouselTitle, slides, sliderSettingObj }) => {   
 	return (
