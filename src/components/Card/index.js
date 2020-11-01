@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Card } from "react-bootstrap";
+import Icon from '../Icon'
 import style from "./card.module.scss";
 
 function CustomCard({ data }) {
@@ -14,11 +15,12 @@ function CustomCard({ data }) {
             <div><span>Last insert  </span>{data.Shared}</div>
           </div>
         </div>
-        <Card.Text>
         <div className={style.cardFooter}>
            <span>By</span> {data.UploadedBy}
+           <p>
+             <Icon icon="clock"/>
+           </p>
         </div>
-        </Card.Text>
       </Card.Body>
     </Card>
   );
