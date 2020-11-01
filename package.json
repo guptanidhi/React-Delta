@@ -8,9 +8,9 @@
     "@testing-library/user-event": "^12.1.10",
     "bootstrap": "^4.5.3",
     "node-sass": "^4.14.1",
-    "react": "^17.0.1",
+    "react": "^16.14.0",
     "react-bootstrap": "^1.4.0",
-    "react-dom": "^17.0.1",
+    "react-dom": "^16.14.0",
     "react-scripts": "4.0.0",
     "react-slick": "^0.27.12",
     "slick-carousel": "^1.8.1",
@@ -39,5 +39,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.5"
   }
 }
