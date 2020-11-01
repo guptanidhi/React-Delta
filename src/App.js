@@ -10,15 +10,20 @@ import { topCategories, navItems, sliderSettings } from './jsonData/data';
 import carouselData from './jsonData/carouselData'
 
 const App = () => (
-  <React.Fragment>
-    
+  <React.Fragment>    
     <CustomNavbar navItems={navItems} />
     <SearchSection
       title="Detasets"
       searchBtnText="Filter"
       topCategoriesData={topCategories} />
     <div className={styles.carouselSection}>
-      <CustomSlider slides={carouselData} sliderSettingObj={sliderSettings} />
+      <CustomSlider carouselTitle="Trending Datasets" slides={carouselData} sliderSettingObj={sliderSettings} />
+    </div>
+    <div className={styles.carouselSection}>
+      <CustomSlider carouselTitle="Popular Datasets" slides={carouselData} sliderSettingObj={sliderSettings} />
+    </div>
+    <div className={styles.carouselSection}>
+      <CustomSlider carouselTitle="Relevant Datasets" slides={carouselData} sliderSettingObj={sliderSettings} />
     </div>
   </React.Fragment>
 );

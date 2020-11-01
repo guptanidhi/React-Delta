@@ -5,10 +5,12 @@ import style from './slider.module.scss'
 import CustomCard from '../Card'
 import Grid from '../Grid'
 import { sliderSettings } from '../../jsonData/data';
+import { Carousel } from 'react-bootstrap';
 
-const CustomSlider = ({ slides, sliderSettingObj }) => {   
+const CustomSlider = ({ carouselTitle, slides, sliderSettingObj }) => {   
 	return (
 		<Grid>
+			<div>{carouselTitle}</div>
 			<Slider {...sliderSettingObj}>
 				{slides.map((slide) => (
 					<div key={slide.id} className={style.slideWrapper}>
@@ -22,10 +24,14 @@ const CustomSlider = ({ slides, sliderSettingObj }) => {
 
 /** Props **/
 CustomSlider.defaultProps = {
+	carouselTitle: '',
+	slides: [],
 	sliderSettingObj: sliderSettings
 }
 
 CustomSlider.propTypes = {
+	carouselTitle: PropTypes.string,
+	slides: PropTypes.array,
 	sliderSettingObj: PropTypes.object
 }
 

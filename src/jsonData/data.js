@@ -59,6 +59,28 @@ const navItems = [
   },
 ];
 
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "gray" }}
+      onClick={onClick}
+    />
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "gray" }}
+      onClick={onClick}
+    />
+  );
+}
+
 const sliderSettings = {
   dots: false,
   infinite: false,
@@ -67,7 +89,9 @@ const sliderSettings = {
   slidesToScroll: 4,
   initialSlide: 0,
   centerPadding: "60px",
-  swipeToSlide: true,
+  swipeToSlide: true,  
+  nextArrow: <SampleNextArrow />,
+  prevArrow: <SamplePrevArrow />,
   responsive: [
     {
       breakpoint: 1024,
