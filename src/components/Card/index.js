@@ -1,26 +1,42 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Card } from "react-bootstrap";
+import Icon from "../Icon";
 import style from "./card.module.scss";
 
 function CustomCard({ data }) {
   return (
     <Card className={style.card}>
-      <Card.Title className={`${style.truncate} ${style.carouselTitle}`}>{data.DocumentTitle}</Card.Title>
+      <Card.Title className={`${style.truncate} ${style.carouselTitle}`}>
+        {data.DocumentTitle}
+      </Card.Title>
       <Card.Body>
         <div className={style.cardHeader}>
           <div className={style.flex}>
-            <div className={style.truncate}><span>FileName  </span>{data.FileName}</div>
-            <div><span>PublicationMethod  </span>{data.PublicationMethod}</div>
-            <div><span>DocumentDate  </span>{data.DocumentDate}</div>
-            <div><span>Uploaded By  </span>{data.UploadedBy}</div>
+            <div className={style.truncate}>
+              <span>FileName </span>
+              {data.FileName}
+            </div>
+            <div>
+              <span>PublicationMethod </span>
+              {data.PublicationMethod}
+            </div>
+            <div>
+              <span>DocumentDate </span>
+              {data.DocumentDate}
+            </div>
+            <div>
+              <span>Uploaded By </span>
+              {data.UploadedBy}
+            </div>
           </div>
         </div>
-        <Card.Text>
         <div className={style.cardFooter}>
-        <Card.Link href="#">View</Card.Link>
+          <Card.Link href="#">View</Card.Link>
+          <p>
+            <Icon icon="clock" />
+          </p>
         </div>
-        </Card.Text>
       </Card.Body>
     </Card>
   );
@@ -28,11 +44,11 @@ function CustomCard({ data }) {
 
 /** Props **/
 CustomCard.defaultProps = {
-	data: {}
-}
+  data: {},
+};
 
 CustomCard.propTypes = {
-	data: PropTypes.object
-}
+  data: PropTypes.object,
+};
 
 export default CustomCard;

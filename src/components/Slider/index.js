@@ -10,7 +10,7 @@ import { Carousel } from 'react-bootstrap';
 const CustomSlider = ({ carouselTitle, slides, sliderSettingObj }) => {   
 	return (
 		<Grid>
-			<div>{carouselTitle}</div>
+			<div className={style.title}>{carouselTitle}</div>
 			<Slider {...sliderSettingObj}>
 				{slides.map((slide) => (
 					<div key={slide.id} className={style.slideWrapper}>
