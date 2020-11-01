@@ -33,9 +33,6 @@ function CustomCard({ data }) {
         </div>
         <div className={style.cardFooter}>
           <Card.Link href="#">View</Card.Link>
-          <p>
-            <Icon icon="clock" />
-          </p>
         </div>
       </Card.Body>
     </Card>
