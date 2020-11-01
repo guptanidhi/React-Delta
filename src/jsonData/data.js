@@ -53,6 +53,9 @@ const navItems = [
   {
     id: 4,
     name: "Consulting",
+  },{
+    id: 5,
+    name: "Resources",
   },
 ];
 

@@ -1,0 +1,8 @@
+.inputWrapper {
+	.searchInput {
+		border: 0;
+		&::-webkit-input-placeholder {
+			font-size:12px
+		}
+	}
+}

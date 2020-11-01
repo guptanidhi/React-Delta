@@ -16,9 +16,9 @@ const SearchSection = (props) => {
 					 <Heading type="h2">{title}</Heading>
 					</div>
 					<Search searchBtnText={searchBtnText}/>
+					<TopCategories topCategories={topCategoriesData}/>
 				</Grid>
 	 		</div>
-			<TopCategories topCategories={topCategoriesData}/>
 		</React.Fragment>
 	 )
 }

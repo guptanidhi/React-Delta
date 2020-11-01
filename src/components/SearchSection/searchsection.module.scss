@@ -1,12 +1,18 @@
 .headingSection{
 	text-align: center;
 	padding: 20px 0 30px;
+	text-transform: uppercase;
 }
 
 .formSection, .requestSection, .headingSection {
-  background-color: #f7f7f7;
+  background-color: #f5f9fd;
 }
 
 .headingWrapper {
 	margin-bottom: 15px;
+	h2 {
+		font-size: 36px;
+		color: #004061;
+		font-weight: bold;
+	}
 }

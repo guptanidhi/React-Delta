@@ -1,37 +1,25 @@
 .card{
-	box-shadow: 0 0 2px 0 rgba(0,0,0,.12), 0 2px 2px 0 rgba(0,0,0,.24);
-.cardHeader{
-	border-bottom: 1px solid #ECECEC;
-	margin-bottom: 10px;
-	.flex {
-		display: flex;
-		padding-bottom: 10px;
+	box-shadow: 0 2px 12px rgba(0,0,0,.0623361);
+	border-top: 2px solid #fbb933;
+	.cardHeader{
+		margin-bottom: 10px;
+		.flex {
+			display: flex;
+			flex-direction: column;
+			padding-bottom: 10px;
+			font-size: 12px;
+			color: #48484f;
+			padding-bottom: 50px;
+			span {
+				font-weight: bold;
+			}
 		
-		span {
-			position: relative;
-			padding-right: 15px;
-			&::after{
-				position: absolute;
-				content: '';
-				right: 5px;
-				top: 3px;
-				height: 70%;
-				width: 1px;
-				background-color: #b5a0a0;
-			}
-			&:last-child{
-				&::after {
-					display: none;
-				}
-			}
 		}
 	}
-	.ellipsis{
-		white-space: nowrap; 
-		width: 100%; 
-		overflow: hidden;
-		text-overflow: ellipsis; 
-		color: #595fbf;
+	.cardFooter {
+		font-size: 12px;
+		span {
+			font-weight: bold;
+		}
 	}
-}
 }

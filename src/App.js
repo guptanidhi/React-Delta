@@ -11,9 +11,10 @@ import carouselData from './jsonData/carouselData'
 
 const App = () => (
   <React.Fragment>
+    
     <CustomNavbar navItems={navItems} />
     <SearchSection
-      title="DeltaSets"
+      title="Detasets"
       searchBtnText="Filter"
       topCategoriesData={topCategories} />
     <div className={styles.carouselSection}>

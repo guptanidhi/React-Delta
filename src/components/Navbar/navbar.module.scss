@@ -1,16 +1,41 @@
 .header{
-	background-color: #595fbf;
+	background-color: #5e919e;
 	box-shadow: 0 0 7px rgba(0,0,0,.1);
 }
 
 .darkBg{
-	background-color: #595fbf;
+	background-color: #5e919e;
 	padding: 20px;
 	.menuWrapper{
 		.menulist{
 			.menu{
 				color: #fff;
+				font-size: 15px;
+				padding: 5px 10px;
 			}
 		}
+	}
+	.logoText {
+		color: #fff;
+	}
+}
+
+.searchBtn {
+	padding-right: 20px;
+    display: flex;
+    align-items: center;
+	color: white;
+	span {
+		font-size: 20px;
+	}
+}
+.createBtn {
+	button {
+	display: flex;
+	align-items: center;
+	span {
+		font-size: 18px;
+		padding-left: 10px;
+	}
 	}
 }
