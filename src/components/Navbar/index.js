@@ -8,7 +8,6 @@ import Icon from '../Icon'
 function CustomNavbar({ navItems }) {
   return (
     <div className={styles.header}>
-      <Grid>
         <Navbar expand="lg" className={styles.darkBg}>
         <Navbar.Brand href="#home" className={styles.logoText}>Delta Zone </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -34,7 +33,6 @@ function CustomNavbar({ navItems }) {
             </Nav>
           </Navbar.Collapse>
         </Navbar>
-      </Grid>
     </div>
   );
 }
