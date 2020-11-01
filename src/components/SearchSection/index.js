@@ -12,11 +12,13 @@ const SearchSection = (props) => {
 		<React.Fragment>
 			<div className={styles.headingSection}>
 				<Grid>
+					<div className={styles.alignSection}>
 					<div className={styles.headingWrapper}>
 					 <Heading type="h2">{title}</Heading>
 					</div>
 					<Search searchBtnText={searchBtnText}/>
 					<TopCategories topCategories={topCategoriesData}/>
+					</div>
 				</Grid>
 	 		</div>
 		</React.Fragment>
