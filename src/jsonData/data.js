@@ -1,3 +1,5 @@
+import styles from '../app.module.scss'
+
 const topCategories = [
   {
     id: 1,
@@ -60,22 +62,20 @@ const navItems = [
 ];
 
 function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
+  const { className, onClick } = props;
   return (
     <div
-      className={className}
-      style={{ ...style, background: "gray" }}
+      className={`${className} ${styles.arrowClass}`}
       onClick={onClick}
     />
   );
 }
 
 function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
+  const { className, onClick } = props;
   return (
     <div
-      className={className}
-      style={{ ...style, background: "gray" }}
+    className={`${className} ${styles.arrowClass}`}
       onClick={onClick}
     />
   );

@@ -6,3 +6,8 @@
 	background-color: #e6ecf8;
 	padding: 30px 0;
 }
+.arrowClass {	
+	&:before {
+		color: gray;
+	}
+}
