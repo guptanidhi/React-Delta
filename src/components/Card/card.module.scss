@@ -1,4 +1,4 @@
-.card{
+.card {
 	box-shadow: 0 2px 12px rgba(0,0,0,.0623361);
 	border-top: 2px solid #fbb933;
 	.cardHeader{
@@ -12,9 +12,17 @@
 			padding-bottom: 50px;
 			span {
 				font-weight: bold;
-			}
-		
+			}		
 		}
+	}
+	.carouselTitle {	
+		padding: 5%;
+	}
+	.truncate {
+		width: 90%;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 	.cardFooter {
 		font-size: 12px;

@@ -6,17 +6,19 @@ import style from "./card.module.scss";
 function CustomCard({ data }) {
   return (
     <Card className={style.card}>
+      <Card.Title className={`${style.truncate} ${style.carouselTitle}`}>{data.DocumentTitle}</Card.Title>
       <Card.Body>
         <div className={style.cardHeader}>
           <div className={style.flex}>
-            <div><span>Observations  </span>{data.Downloads}</div>
-            <div><span>Features  </span>{data.Likes}</div>
-            <div><span>Last insert  </span>{data.Shared}</div>
+            <div className={style.truncate}><span>FileName  </span>{data.FileName}</div>
+            <div><span>PublicationMethod  </span>{data.PublicationMethod}</div>
+            <div><span>DocumentDate  </span>{data.DocumentDate}</div>
+            <div><span>Uploaded By  </span>{data.UploadedBy}</div>
           </div>
         </div>
         <Card.Text>
         <div className={style.cardFooter}>
-           <span>By</span> {data.UploadedBy}
+        <Card.Link href="#">View</Card.Link>
         </div>
         </Card.Text>
       </Card.Body>

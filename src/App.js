@@ -13,7 +13,7 @@ const App = () => (
   <React.Fragment>    
     <CustomNavbar navItems={navItems} />
     <SearchSection
-      title="Detasets"
+      title="Datasets"
       searchBtnText="Filter"
       topCategoriesData={topCategories} />
     <div className={styles.carouselSection}>
