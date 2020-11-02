@@ -6,7 +6,7 @@ import style from "./card.module.scss";
 function CustomCard({ data }) {
   return (
     <Card className={style.card}>
-      <Card.Title className={`${style.truncate} ${style.carouselTitle}`}>
+      <Card.Title className={style.carouselTitle>
         {data.DocumentTitle}
       </Card.Title>
       <Card.Body>
