@@ -92,6 +92,7 @@ const sliderSettings = {
   swipeToSlide: true,  
   nextArrow: <SampleNextArrow />,
   prevArrow: <SamplePrevArrow />,
+  adaptiveHeight: true,
   responsive: [
     {
       breakpoint: 1024,

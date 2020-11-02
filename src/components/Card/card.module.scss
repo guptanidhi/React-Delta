@@ -11,9 +11,8 @@
 			display: flex;
 			flex-direction: column;
 			padding-bottom: 10px;
-			font-size: 12px;
+			font-size: 14px;
 			color: #48484f;
-			padding-bottom: 30px;
 			span {
 				font-weight: bold;
 			}		
@@ -21,6 +20,8 @@
 	}
 	.carouselTitle {	
 		font-size: 16px;
+		color: #48484f;
+		min-height: 38px;
 	}
 	.truncate {
 		width: 90%;
@@ -44,10 +45,12 @@
 	}
 	.cardAddon {
 		display: flex;
-		span {
+		> span {
 			font-size: 12px;
 			padding-right: 10px;
 			position: relative;
+			color: #48484f;
+			font-weight: lighter;
 			&:after {
 				position: absolute;
 				right: 4px;
@@ -63,6 +66,25 @@
 				display: none;
 				}
 			}
+			> span {
+				padding-right: 5px;
+			}
+		}
+		&.socialIcon {
+			padding : 2px 0
+		}
+	}
+	.upload {
+		padding: 5px 0 15px;
+		font-size: 12px;
+		font-weight: bold;
+		display: flex;
+		align-items: center;
+		color: #48484f;
+		cursor: pointer;
+		span {
+			padding-right: 10px;
+			font-size: 12px;
 		}
 	}
 }

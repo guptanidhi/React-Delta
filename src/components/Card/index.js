@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Icon from '../Icon'
 import { Card } from "react-bootstrap";
 import style from "./card.module.scss";
 
@@ -17,6 +18,7 @@ function CustomCard({ data }) {
           {data.Language}
         </span>
       </div>
+      <div className={style.upload}><Icon icon="upload"/>{data.UploadedBy}</div>
       <Card.Title className={style.carouselTitle}>
         {data.DocumentTitle}
       </Card.Title>
@@ -34,7 +36,31 @@ function CustomCard({ data }) {
           </div>
         </div>
         <div className={style.cardFooter}>
-          <Card.Link href={data.FileLocation} target="_blank">View pdf</Card.Link>
+          <div className={`${style.cardAddon} ${style.socialIcon}`}>
+            <span>
+              <Icon icon="download" />
+              {data.Downloads}
+            </span>
+            <span>
+            <Icon icon="like" />
+              {data.Likes}
+            </span>
+            <span>
+            <Icon icon="share" />
+              {data.Shared}
+            </span>
+          </div>
+          <div className={`${style.cardAddon} ${style.socialIcon}`}>
+            <span>
+              <Icon icon="pdfView" />
+              <Card.Link href={data.FileLocation} target="_blank">View pdf</Card.Link>
+            </span>
+            <span>
+            <Icon icon="pdfDownload" />
+            <Card.Link href={data.FileLocation} target="_blank">Download pdf</Card.Link>
+            </span>
+          </div>
+          
         </div>
       </Card.Body>
     </Card>
