@@ -6,6 +6,7 @@ import style from "./card.module.scss";
 function CustomCard({ data }) {
   return (
     <Card className={style.card}>
+      <span>{data.DocumentDate} | {data.Language} | {data.PublicationMethod}</span>
       <Card.Title className={style.carouselTitle}>
         {data.DocumentTitle}
       </Card.Title>
