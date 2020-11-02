@@ -6,27 +6,19 @@ import style from "./card.module.scss";
 function CustomCard({ data }) {
   return (
     <Card className={style.card}>
-      <Card.Title className={style.carouselTitle>
+      <Card.Title className={style.carouselTitle}>
         {data.DocumentTitle}
       </Card.Title>
       <Card.Body>
         <div className={style.cardHeader}>
           <div className={style.flex}>
             <div className={style.truncate}>
-              <span>FileName </span>
-              {data.FileName}
+              <span>Categories </span>
+              {data.Categories}
             </div>
             <div>
-              <span>PublicationMethod </span>
-              {data.PublicationMethod}
-            </div>
-            <div>
-              <span>DocumentDate </span>
-              {data.DocumentDate}
-            </div>
-            <div>
-              <span>Uploaded By </span>
-              {data.UploadedBy}
+              <span>Desc </span>
+              {data.Description}
             </div>
           </div>
         </div>
