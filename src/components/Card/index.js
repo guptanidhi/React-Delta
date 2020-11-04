@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Icon from '../Icon'
-import { Card } from "react-bootstrap";
+import { Card, Modal } from "react-bootstrap";
 import style from "./card.module.scss";
 
-function CustomCard({ data }) {
+const CustomCard = ({ data }) => {
+  const [ isPdfOpen, setPdfOpen ] = useState(false)
+  const handleClose = () => {
+    setPdfOpen(false)
+  }
+  const fileId = data.FileLocation.split(/\/d\//)[1].split(/\/view/)[0];
   return (
+    <>
     <Card className={style.card}>
       <div className={style.cardAddon}>
         <span>
@@ -53,17 +59,27 @@ function CustomCard({ data }) {
           <div className={`${style.cardAddon} ${style.socialIcon}`}>
             <span>
               <Icon icon="pdfView" />
-              <Card.Link href={data.FileLocation} target="_blank">View pdf</Card.Link>
+              <Card.Link onClick={() => setPdfOpen(true)} >View pdf</Card.Link>
             </span>
             <span>
             <Icon icon="pdfDownload" />
-            <Card.Link href={data.FileLocation} target="_blank">Download pdf</Card.Link>
+            <Card.Link href={`https://drive.google.com/uc?export=download&id=${fileId}`} download={data.FileName}>Download</Card.Link>
             </span>
-          </div>
-          
+          </div>          
         </div>
       </Card.Body>
-    </Card>
+    </Card>    
+    {isPdfOpen && (
+      <Modal show={isPdfOpen} onHide={handleClose} size="lg">
+        <Modal.Header closeButton>
+          <Modal.Title>{data.FileName}</Modal.Title>
+        </Modal.Header>      
+        <Modal.Body>
+          <iframe title={data.FileName} frameborder="0" scrolling="no" width="98%" height="400" src={`https://drive.google.com/file/d/${fileId}/preview`}> </iframe>
+        </Modal.Body>
+      </Modal>
+      )}
+    </>
   );
 }
 
